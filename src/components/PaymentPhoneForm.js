@@ -31,12 +31,12 @@ const getFormOptions = () => {
         keyboardType: 'phone-pad',
       },
       notes: {
-        label: i18n.t('Comment'),
+        label: i18n.t('Коментар'),
         i18n: {
           optional: '',
           required: '',
         },
-        help: `${i18n.t('(Optional)')}`,
+        help: `${i18n.t("(Необов'язково)")}`,
         clearButtonMode: 'while-editing',
         returnKeyType: 'done',
         multiline: true,

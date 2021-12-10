@@ -178,7 +178,7 @@ export class CheckoutProfile extends Component {
           cartFooterEnabled
           showTitles
           totalPrice={formatPrice(cart.total_formatted.price)}
-          btnText={i18n.t('Next').toUpperCase()}
+          btnText={i18n.t('Наступна').toUpperCase()}
           onBtnPress={(values, validateCb) => {
             validateCb();
           }}

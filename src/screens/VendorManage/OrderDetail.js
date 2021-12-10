@@ -276,7 +276,7 @@ export class OrderDetail extends Component {
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.mainHeader}>
-            {i18n.t('Order')} #{order.order_id}
+            {i18n.t('Заказ')} #{order.order_id}
           </Text>
           <Text style={styles.subHeader}>
             {i18n.t('Placed on')} {format(date, settings.dateFormat)}
@@ -284,7 +284,7 @@ export class OrderDetail extends Component {
 
           <FormBlock>
             <Text style={styles.header}>
-              {i18n.t('Products information').toUpperCase()}
+              {i18n.t('Інформація про замовлення').toUpperCase()}
             </Text>
             <View style={styles.productsWrapper}>{productsList}</View>
           </FormBlock>
@@ -294,19 +294,19 @@ export class OrderDetail extends Component {
           <FormBlock>
             <Text style={styles.header}>{i18n.t('Summary').toUpperCase()}</Text>
             <View style={styles.formBlockWraper}>
-              <FormBlockField title={`${i18n.t('Payment method')}:`}>
+              <FormBlockField title={`${i18n.t('Спосіб оплати')}:`}>
                 {order.payment_method.payment}
               </FormBlockField>
               <FormBlockField title={`${i18n.t('Shipping method')}:`}>
                 {shippingMethodsList}
               </FormBlockField>
-              <FormBlockField title={`${i18n.t('Subtotal')}:`}>
+              <FormBlockField title={`${i18n.t('Загальна сума')}:`}>
                 {formatPrice(order.subtotal_formatted.price)}
               </FormBlockField>
               <FormBlockField title={`${i18n.t('Shipping cost')}:`}>
                 {formatPrice(order.shipping_cost_formatted.price)}
               </FormBlockField>
-              <FormBlockField title={`${i18n.t('Total')}:`}>
+              <FormBlockField title={`${i18n.t('Всього')}:`}>
                 {formatPrice(order.total_formatted.price)}
               </FormBlockField>
             </View>

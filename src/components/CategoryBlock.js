@@ -20,6 +20,7 @@ const styles = EStyleSheet.create({
     marginBottom: 5,
     alignItems: 'stretch',
   },
+  // текст по центру
   header: {
     fontWeight: 'bold',
     fontSize: '1.3rem',
@@ -82,7 +83,7 @@ export default class CategoriesBlocks extends Component {
     return (
       <View style={styles.container}>
         {wrapper !== '' && (
-          <Text style={styles.header}>{i18n.t('Categories')}</Text>
+          <Text style={styles.header}>{i18n.t(this.props.name)}</Text>
         )}
         <View style={styles.wrapper}>{itemsList}</View>
       </View>

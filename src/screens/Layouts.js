@@ -99,7 +99,7 @@ export class Layouts extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: config.shopName.toUpperCase(),
+//          text: config.shopName.toUpperCase(),
         },
       },
     });

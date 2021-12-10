@@ -23,15 +23,15 @@ const styles = EStyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    height: PRODUCT_IMAGE_WIDTH + 85,
-    maxWidth: `${Math.floor(94 / PRODUCT_NUM_COLUMNS)}%`,
+    height: PRODUCT_IMAGE_WIDTH + 45.5,
+    maxWidth: `${Math.floor(95 / PRODUCT_NUM_COLUMNS)}%`,
   },
   productImage: {
     width: PRODUCT_IMAGE_WIDTH,
     height: PRODUCT_IMAGE_WIDTH,
   },
   description: {
-    paddingTop: 8,
+    paddingTop: 4,
     paddingBottom: 8,
   },
   productName: {
@@ -39,22 +39,35 @@ const styles = EStyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'left',
   },
+//   добавил стиль перечеркнутого текста
+  productPriceCrossedOut: {
+      textDecorationLine: 'line-through',
+      textDecorationStyle: 'solid',
+      color: '#73626B',
+      fontWeight: 'bold',
+      textAlign: 'left',
+    },
   productPrice: {
-    color: '#73626B',
+    color: '#d60f20',
     fontWeight: 'bold',
     textAlign: 'left',
   },
+  productPriceWithoutDiscount: {
+    color: '#73626B',
+    fontWeight: 'bold',
+    textAlign: 'left',
+    },
   listDiscountWrapper: {
     backgroundColor: '$productDiscountColor',
     position: 'absolute',
-    top: 4,
-    right: 4,
-    paddingTop: 2,
-    paddingBottom: 2,
-    paddingLeft: 4,
-    paddingRight: 4,
-    borderRadius: '$borderRadius',
-    width: 100,
+    bottom: 29,
+    left: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
+    paddingLeft: 2,
+    paddingRight: 2,
+//    borderRadius: '$borderRadius',  закругление краев на скидке
+    width: 35,
   },
   priceWrapper: {
     flex: 1,
@@ -114,7 +127,7 @@ class ProductListView extends PureComponent {
     return (
       <View style={styles.listDiscountWrapper}>
         <Text style={styles.listDiscountText} numberOfLines={1}>
-          {i18n.t('Discount')} {`${discount}%`}
+          {`${-discount}%`}
         </Text>
       </View>
     );
@@ -151,9 +164,23 @@ class ProductListView extends PureComponent {
         {isProductPriceZero ? (
           <Text>{i18n.t('Contact us for a price')}</Text>
         ) : (
-          <Text numberOfLines={1} style={styles.productPrice}>
-            {formatPrice(productPrice)}
-          </Text>
+//          изменение строки с ценой на зачеркнутую и добавление рядом еще одной цены проверка если цена без скидки
+//          <Text numberOfLines={1} style={styles.productPrice}>
+//            {formatPrice(productPrice)}
+//          </Text>
+
+        discountPrice != productPrice ?
+        (<>
+        <Text numberOfLines={1} style={styles.productPriceCrossedOut}>
+                    {formatPrice(discountPrice)}
+                  </Text>
+        <Text numberOfLines={1} style={styles.productPrice}>
+                    {} {formatPrice(productPrice)}
+                  </Text>
+        </> )
+         : (<Text numberOfLines={1} style={styles.productPriceWithoutDiscount}>
+                     {formatPrice(productPrice)}
+                </Text>)
         )}
       </View>
     );

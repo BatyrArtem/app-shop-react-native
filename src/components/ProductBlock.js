@@ -8,6 +8,7 @@ import ProductListView from './ProductListView';
 import { PRODUCT_NUM_COLUMNS, PRODUCT_IMAGE_WIDTH } from '../utils';
 import theme from '../config/theme';
 
+// увеличить уиеншить слайдер
 const styles = EStyleSheet.create({
   container: {
     marginTop: 5,

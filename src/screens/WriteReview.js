@@ -217,7 +217,7 @@ export class WriteReview extends Component {
       case DISCUSSION_RATING:
         FormFields = t.struct({
           name: t.String,
-          rating: Rating,
+          rating: Rating,и
         });
         break;
 

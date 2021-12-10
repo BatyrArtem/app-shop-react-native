@@ -7,6 +7,7 @@ import { get } from 'lodash';
 import { stripTags } from '../utils';
 import theme from '../config/theme';
 
+//редактирование верхнего банера
 const styles = EStyleSheet.create({
   imageWrapper: {
     marginTop: 5,

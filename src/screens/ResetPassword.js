@@ -60,7 +60,7 @@ const ResetPassword = ({ componentId, authActions }) => {
     Navigation.mergeOptions(componentId, {
       topBar: {
         title: {
-          text: i18n.t('Reset password'),
+          text: i18n.t('Забули пароль'),
         },
         rightButtons: [
           {
@@ -137,7 +137,7 @@ const ResetPassword = ({ componentId, authActions }) => {
             <View style={styles.tryAgainWrapper}>
               <Text style={styles.hint}>
                 {i18n.t(
-                  'Enter your e-mail, we will send you a code to log into your account.',
+                  'Введіть свій e-mail, ми надішлемо вам код для входу в обліковий запис.',
                 )}
               </Text>
             </View>
@@ -154,7 +154,7 @@ const ResetPassword = ({ componentId, authActions }) => {
           <TouchableOpacity
             onPress={resetPasswordHandler}
             style={styles.button}>
-            <Text style={styles.buttonText}>{i18n.t('Get the code')}</Text>
+            <Text style={styles.buttonText}>{i18n.t('Отримати код')}</Text>
           </TouchableOpacity>
         </>
       ) : (

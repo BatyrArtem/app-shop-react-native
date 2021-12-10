@@ -73,7 +73,7 @@ const styles = EStyleSheet.create({
     alignItems: 'center',
   },
   emptyListIconWrapper: {
-    backgroundColor: '#3FC9F6',
+    backgroundColor: '#AFB0B4',
     width: '12rem',
     height: '12rem',
     borderRadius: '6rem',
@@ -149,7 +149,7 @@ export class WishList extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: i18n.t('Wish List').toUpperCase(),
+          text: i18n.t('Список побажань').toUpperCase(),
         },
         rightButtons: [
           {
@@ -194,7 +194,7 @@ export class WishList extends Component {
         '',
         [
           {
-            text: i18n.t('Cancel'),
+            text: i18n.t('Закрити'),
             onPress: () => {},
             style: 'cancel',
           },
@@ -245,7 +245,7 @@ export class WishList extends Component {
 
     const swipeoutBtns = [
       {
-        text: i18n.t('Delete'),
+        text: i18n.t('Видалити'),
         type: 'delete',
         onPress: () => this.handleRemoveProduct(item),
       },
@@ -296,7 +296,7 @@ export class WishList extends Component {
           <Icon name="favorite" style={styles.emptyListIcon} />
         </View>
         <Text style={styles.emptyListHeader}>
-          {i18n.t('Your Wish Lists will love here.')}
+          {i18n.t('Список побажань порожнiй')}
         </Text>
       </View>
     );

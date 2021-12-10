@@ -16,7 +16,7 @@ const styles = EStyleSheet.create({
     fontSize: '0.9rem',
   },
   primary: {
-    backgroundColor: '$buttonBackgroundColor',
+    backgroundColor: '#000',
     paddingTop: 8,
     paddingBottom: 8,
     paddingLeft: 22,

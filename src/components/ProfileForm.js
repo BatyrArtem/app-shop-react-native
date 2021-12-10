@@ -29,7 +29,7 @@ const styles = EStyleSheet.create({
     marginBottom: -30,
   },
   btn: {
-    backgroundColor: '#4fbe31',
+    backgroundColor: '#7a7878',
     padding: 12,
     borderRadius: 3,
   },
@@ -122,7 +122,7 @@ export default class ProfileForm extends Component {
   getFieldType = (field, allFields) => {
     const { dateFormat } = this.props;
     const label = field.description || '';
-    const help = !field.required ? `${i18n.t('(Optional)')}` : '';
+    const help = !field.required ? `${i18n.t("(Необов'язково)")}` : '';
     const optionI18n = {
       i18n: {
         optional: '',
@@ -446,7 +446,7 @@ export default class ProfileForm extends Component {
         ) : (
           <TouchableOpacity style={styles.btn} onPress={this.handleValidate}>
             <Text style={styles.btnText}>
-              {isEdit ? i18n.t('Save') : i18n.t('Register')}
+              {isEdit ? i18n.t('Save') : i18n.t('Зареєструватися')}
             </Text>
           </TouchableOpacity>
         )}

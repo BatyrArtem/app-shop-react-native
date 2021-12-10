@@ -166,7 +166,7 @@ export class Search extends Component {
 
     return (
       <View style={styles.emptyContainer}>
-        <Text style={styles.emptyText}>{i18n.t('List is empty')}</Text>
+        <Text style={styles.emptyText}>{i18n.t('Список порожнiй')}</Text>
       </View>
     );
   };
@@ -209,7 +209,7 @@ export class Search extends Component {
             onChangeText={debounce((t) => this.handleInputChange(t), 600)}
             style={Platform.os === 'ios' ? styles.input : styles.inputAndroid}
             clearButtonMode="while-editing"
-            placeholder={i18n.t('Search')}
+            placeholder={i18n.t('Пошук')}
           />
         </View>
         <View style={styles.content}>

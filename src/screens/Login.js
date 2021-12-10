@@ -24,7 +24,7 @@ const styles = EStyleSheet.create({
     padding: 12,
   },
   btn: {
-    backgroundColor: '#4fbe31',
+    backgroundColor: '#000000',
     padding: 12,
     borderRadius: 3,
   },
@@ -84,7 +84,7 @@ export class Login extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: i18n.t('Login').toUpperCase(),
+          text: i18n.t('Увiйти').toUpperCase(),
         },
         rightButtons: [
           {
@@ -154,12 +154,12 @@ export class Login extends Component {
       disableOrder: true,
       fields: {
         email: {
-          label: i18n.t('Email'),
+          label: i18n.t('E-mail'),
           keyboardType: 'email-address',
           clearButtonMode: 'while-editing',
         },
         password: {
-          label: i18n.t('Password'),
+          label: i18n.t('Пароль'),
           secureTextEntry: true,
           clearButtonMode: 'while-editing',
         },
@@ -173,18 +173,18 @@ export class Login extends Component {
           style={styles.btn}
           onPress={() => this.handleLogin()}
           disabled={auth.fetching}>
-          <Text style={styles.btnText}>{i18n.t('Login')}</Text>
+          <Text style={styles.btnText}>{i18n.t('Логiн')}</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.btnRegistration}
           onPress={() => nav.pushRegistration(this.props.componentId)}>
           <Text style={styles.btnRegistrationText}>
-            {i18n.t('Registration')}
+            {i18n.t('Реєстрація')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => nav.showResetPassword()}>
           <Text style={styles.forgotPasswordText}>
-            {i18n.t('Forgot your password?')}
+            {i18n.t('Забули ваш пароль?')}
           </Text>
         </TouchableOpacity>
         <Spinner visible={auth.fetching} mode="modal" />

@@ -58,7 +58,7 @@ export const ScrollPicker: React.FC<ScrollPickerProps> = ({
     Navigation.mergeOptions(componentId, {
       topBar: {
         title: {
-          text: title.toUpperCase(),
+          text: typeof(title) === "string" ? title.toUpperCase() : title,
         },
         rightButtons: [
           {

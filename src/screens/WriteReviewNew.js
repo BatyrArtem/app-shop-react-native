@@ -178,7 +178,7 @@ export const WriteReviewNew = ({
             ...(requredFiledsNotice && styles.requiredInputDangerColor),
           }}
           value={comment.input}
-          placeholder={`${i18n.t('Comment')}*`}
+          placeholder={`${i18n.t('Коментар')}*`}
           placeholderTextColor={
             requredFiledsNotice ? theme.$dangerColor : '#B3B3B3'
           }

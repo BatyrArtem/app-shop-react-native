@@ -36,7 +36,7 @@ const styles = EStyleSheet.create({
   totalText: {
     textAlign: 'right',
     marginTop: 4,
-    color: '#979797',
+    color: '#000000',
   },
   totalDiscountText: {
     textAlign: 'right',
@@ -63,7 +63,7 @@ const renderOrderDetail = (products, cart) => {
   return (
     <View style={styles.totalWrapper}>
       <Text style={styles.totalText}>
-        {`${i18n.t('Subtotal')}: ${get(cart, 'subtotal_formatted.price', '')}`}
+        {`${i18n.t('Загальна сума')}: ${get(cart, 'subtotal_formatted.price', '')}`}
       </Text>
       {isIncludingDiscount && (
         <Text style={styles.totalDiscountText}>
@@ -76,14 +76,14 @@ const renderOrderDetail = (products, cart) => {
         </Text>
       )}
       <Text style={styles.totalText}>
-        {`${i18n.t('Shipping')}: ${get(
+        {`${i18n.t('Доставка')}: ${get(
           cart,
           'shipping_cost_formatted.price',
           '',
         )}`}
       </Text>
       <Text style={styles.totalText}>
-        {`${i18n.t('Taxes')}: ${get(cart, 'tax_subtotal_formatted.price', '')}`}
+        {`${i18n.t('Податки')}: ${get(cart, 'tax_subtotal_formatted.price', '')}`}
       </Text>
     </View>
   );
@@ -189,7 +189,7 @@ export const CartProductList = ({
     return (
       <CartFooter
         totalPrice={formatPrice(cart.total_formatted.price)}
-        btnText={i18n.t('Checkout').toUpperCase()}
+        btnText={i18n.t('Оформлення').toUpperCase()}
         onBtnPress={() => handlePlaceOrder(auth, cart)}
       />
     );

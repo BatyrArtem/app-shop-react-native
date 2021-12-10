@@ -16,7 +16,7 @@ const styles = EStyleSheet.create({
     alignItems: 'center',
   },
   emptyListIconWrapper: {
-    backgroundColor: '#3FC9F6',
+    backgroundColor: '#afb0b3',
     width: '12rem',
     height: '12rem',
     borderRadius: '6rem',
@@ -53,9 +53,9 @@ const EmptyCart = () => (
       <Icon name="add-shopping-cart" style={styles.emptyListIcon} />
     </View>
     <Text style={styles.emptyListHeader}>
-      {i18n.t('Your shopping cart is empty.')}
+      {i18n.t('На жаль, Ваш кошик порожнiй')}
     </Text>
-    <Text style={styles.emptyListDesc}>{i18n.t('Looking for ideas?')}</Text>
+    <Text style={styles.emptyListDesc}>{i18n.t('Перейдiть на головну')}</Text>
   </View>
 );
 

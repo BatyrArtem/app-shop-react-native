@@ -146,7 +146,7 @@ export default class DiscussionList extends Component {
    */
   renderEmpty = () => (
     <View style={styles.empty}>
-      <Text style={styles.emptyText}>{i18n.t('No posts found')}</Text>
+      <Text style={styles.emptyText}>{i18n.t('Повідомлень не знайдено')}</Text>
     </View>
   );
 

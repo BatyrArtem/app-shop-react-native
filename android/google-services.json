@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "604589102969",
+    "project_id": "arber-marketplace-31c16",
+    "storage_bucket": "arber-marketplace-31c16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604589102969:android:752c249d877945388a41a8",
+        "android_client_info": {
+          "package_name": "com.arber.arbermarketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604589102969-sem3nqbdcrsqso0egsebj417e0ib4kvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJpHAB8ikbRyLwHh70sq5m2eBB6vdsPK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604589102969-sem3nqbdcrsqso0egsebj417e0ib4kvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -54,7 +54,8 @@ const styles = EStyleSheet.create({
     marginRight: 20,
   },
   text: {
-    color: '$buttonWithoutBackgroundTextColor',
+  //цвет текста фильтра и сортировки
+    color: '#0d0d0d',
     fontSize: '0.9rem',
   },
   filterText: {
@@ -63,13 +64,13 @@ const styles = EStyleSheet.create({
   },
   filterIcon: {
     fontSize: '1.2rem',
-    color: '#8e8e8e',
+    color: '#0d0d0d',
     position: 'absolute',
     top: 4,
     left: -20,
   },
   badge: {
-    backgroundColor: '#0093ff',
+    backgroundColor: '#ff0019',
     minWidth: 20,
     height: 20,
     borderRadius: 15,
@@ -92,7 +93,8 @@ const styles = EStyleSheet.create({
     width: '100%',
   },
   scrollWrapper: {
-    paddingTop: 4,
+
+    paddingTop: 6,
     marginLeft: 20,
   },
   filterFooterSection: {
@@ -129,6 +131,7 @@ const styles = EStyleSheet.create({
     marginTop: 20,
     marginLeft: 14,
   },
+  // цвет в фильтрах заголовки
   pickerOpenBtnText: {
     fontSize: 20,
     color: '#000',
@@ -271,49 +274,49 @@ class SortProducts extends Component {
 
   getItemList = () => [
     {
-      name: i18n.t('Sorting: Newest items first'),
+      name: i18n.t('Сортувати: Спершу нові предмети'),
       params: {
         sort_by: 'timestamp',
         sort_order: 'desc',
       },
     },
     {
-      name: i18n.t('Sorting: A to Z'),
+      name: i18n.t('Сортувати: А до Я'),
       params: {
         sort_by: 'product',
         sort_order: 'asc',
       },
     },
     {
-      name: i18n.t('Sorting: Z to A'),
+      name: i18n.t('Сортувати: Я до А'),
       params: {
         sort_by: 'product',
         sort_order: 'desc',
       },
     },
     {
-      name: i18n.t('Sorting: Lowest prices first'),
+      name: i18n.t('Сортувати: Спочатку найнижчі ціни'),
       params: {
         sort_by: 'price',
         sort_order: 'asc',
       },
     },
     {
-      name: i18n.t('Sorting: Highest prices first'),
+      name: i18n.t('Сортувати: Найвищі ціни спочатку'),
       params: {
         sort_by: 'price',
         sort_order: 'desc',
       },
     },
     {
-      name: i18n.t('Sorting: Most popular first'),
+      name: i18n.t('Найпопулярніший спочатку'),
       params: {
         sort_by: 'popularity',
         sort_order: 'desc',
       },
     },
     {
-      name: i18n.t('Cancel'),
+      name: i18n.t('Скасувати'),
       params: {
         sort_by: '',
         sort_order: '',
@@ -532,7 +535,7 @@ class SortProducts extends Component {
         </TouchableOpacity>
         <ScrollView horizontal contentContainerStyle={styles.scrollWrapper}>
           <Button type="ghost" onPress={this.clearAllFilter}>
-            {i18n.t('Clear all')}
+            {i18n.t('Очистити все')}
           </Button>
           {selectedItems.map((item) => (
             <Button
@@ -663,8 +666,8 @@ class SortProducts extends Component {
    */
   renderFooter = () => (
     <View style={styles.filterFooterSection}>
-      <Button type="primary" onPress={this.handleChangeFilter}>
-        {i18n.t('Apply')}
+      <Button type="" onPress={this.handleChangeFilter}>
+        {i18n.t('Застосувати')}
       </Button>
     </View>
   );
@@ -737,7 +740,7 @@ class SortProducts extends Component {
             }}>
             <Icon name="filter-list" style={styles.filterIcon} />
             <Text style={styles.text} numberOfLines={2}>
-              {i18n.t('Filter')}
+              {i18n.t('Фільтр')}
             </Text>
             {activeFiltersCount !== 0 && (
               <View style={styles.badge}>

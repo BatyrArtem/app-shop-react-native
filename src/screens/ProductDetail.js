@@ -341,7 +341,7 @@ export const ProductDetail = ({
 
     return (
       <Section
-        title={i18n.t('Select')}
+        title={i18n.t('Обрати')}
         wrapperStyle={styles.wrapperStyle}
         topDivider>
         <ProductDetailOptions
@@ -373,7 +373,7 @@ export const ProductDetail = ({
     return (
       <View style={styles.listDiscountWrapper}>
         <Text style={styles.listDiscountText}>
-          {`${i18n.t('Discount')} ${discount}%`}
+          {`${i18n.t('Знижка')} ${discount}%`}
         </Text>
       </View>
     );
@@ -432,7 +432,7 @@ export const ProductDetail = ({
           isRatingSelectionDisabled
         />
         <Text style={styles.ratingCountText}>
-          {reviewCount} {i18n.t('reviews')}
+          {reviewCount} {i18n.t('відгуків')}
         </Text>
       </View>
     );
@@ -468,7 +468,7 @@ export const ProductDetail = ({
 
     if (outOfStock) {
       return (
-        <Text style={styles.outOfStockText}>{i18n.t('Out of stock')}</Text>
+        <Text style={styles.outOfStockText}>{i18n.t('Немає в наявності')}</Text>
       );
     }
 
@@ -480,14 +480,14 @@ export const ProductDetail = ({
               {formatPrice(productPrice)}
               {showTaxedPrice && (
                 <Text style={styles.smallText}>
-                  {` (${i18n.t('Including tax')})`}
+                  {` (${i18n.t('Включаючи податок')})`}
                 </Text>
               )}
             </Text>
           </>
         ) : (
           <Text style={styles.zeroPrice}>
-            {i18n.t('Contact us for a price')}
+            {i18n.t("Зв'яжіться з нами за ціною")}
           </Text>
         )}
         {showDiscount && isProductPriceZero && (
@@ -509,7 +509,7 @@ export const ProductDetail = ({
 
     return (
       <Section
-        title={i18n.t('Description')}
+        title={i18n.t('Опис')}
         wrapperStyle={styles.wrapperStyle}
         topDivider>
         <Text style={styles.descText}>
@@ -547,7 +547,7 @@ export const ProductDetail = ({
   };
 
   const renderNewDiscussion = () => {
-    const title = i18n.t('Reviews');
+    const title = i18n.t('Відгуки');
 
     return (
       <Section
@@ -555,7 +555,7 @@ export const ProductDetail = ({
         topDivider
         wrapperStyle={styles.wrapperStyle}
         showRightButton={true}
-        rightButtonText={i18n.t('Write a Review')}
+        rightButtonText={i18n.t('Написати відгук')}
         onRightButtonPress={() => {
           nav.showModalWriteReviewNew({
             discussionType: 'P',
@@ -576,7 +576,7 @@ export const ProductDetail = ({
   const renderOldDiscussion = () => {
     let activeDiscussion = discussion.items[`p_${product.product_id}`];
     const masMore = activeDiscussion.search.total_items > 2;
-    const title = i18n.t('Reviews');
+    const title = i18n.t('Відгуки');
 
     return (
       <Section
@@ -584,7 +584,7 @@ export const ProductDetail = ({
         topDivider
         wrapperStyle={styles.wrapperStyle}
         showRightButton={true}
-        rightButtonText={i18n.t('Write a Review')}
+        rightButtonText={i18n.t('Написати відгук')}
         onRightButtonPress={() => {
           nav.pushWriteReview(componentId, {
             activeDiscussion,
@@ -605,7 +605,7 @@ export const ProductDetail = ({
                 productId: product.product_id,
               });
             }}>
-            <Text style={styles.sectionBtnText}>{i18n.t('View All')}</Text>
+            <Text style={styles.sectionBtnText}>{i18n.t('Подивитись все')}</Text>
           </TouchableOpacity>
         )}
       </Section>
@@ -695,11 +695,11 @@ export const ProductDetail = ({
 
     return (
       <Section
-        title={i18n.t('Vendor')}
+        title={i18n.t('Продавець')}
         wrapperStyle={styles.wrapperStyle}
         topDivider
         showRightButton={true}
-        rightButtonText={i18n.t('Details')}
+        rightButtonText={i18n.t('Деталі')}
         onRightButtonPress={() => {
           nav.showModalVendorDetail({
             vendorId: vendor.company_id,
@@ -708,24 +708,27 @@ export const ProductDetail = ({
         <View style={styles.vendorWrapper}>
           <Text style={styles.vendorName}>{vendor.company}</Text>
           <Text style={styles.vendorProductCount}>
-            {i18n.t('{{count}} item(s)', { count: vendor.products_count })}
+            {i18n.t('{{count}} вещей', { count: vendor.products_count })}
           </Text>
           <Text style={styles.vendorDescription}>
             {stripTags(vendor.description)}
           </Text>
         </View>
-        <TouchableOpacity
-          style={styles.sectionBtn}
-          onPress={() => {
-            nav.showModalVendor({
-              companyId: vendor.company_id,
-            });
-          }}>
-          <Text style={styles.sectionBtnText}>{i18n.t('Go To Store')}</Text>
-        </TouchableOpacity>
+
       </Section>
     );
   };
+
+  // убрал этот текст из блока вверху между </View> и </Section>
+  //        <TouchableOpacity
+  //          style={styles.sectionBtn}
+  //          onPress={() => {
+  //            nav.showModalVendor({
+  //              companyId: vendor.company_id,
+  //            });
+  //          }}>
+  //          <Text style={styles.sectionBtnText}>{i18n.t('Go To Store')}</Text>
+  //        </TouchableOpacity>
 
   /**
    * Renders sellers if common products for vendor is turn on.

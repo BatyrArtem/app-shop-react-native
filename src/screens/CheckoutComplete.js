@@ -112,7 +112,7 @@ export class CheckoutComplete extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: i18n.t('Checkout complete').toUpperCase(),
+          text: i18n.t('Оформлення завершено').toUpperCase(),
         },
         backButton: {
           visible: false,
@@ -282,14 +282,14 @@ export class CheckoutComplete extends Component {
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.mainHeader}>{i18n.t('Congratulations!')}</Text>
+          <Text style={styles.mainHeader}>{i18n.t('Вітаю!')}</Text>
           <Text style={styles.subHeader}>
-            {i18n.t('Your order has been successfully placed.')}
+            {i18n.t('Ваше замовлення успішно розміщено.')}
           </Text>
           <FormBlock>
             <View style={styles.flexWrap}>
               <Text style={styles.header}>
-                {i18n.t('order').toUpperCase()} #{orderDetail.order_id}
+                {i18n.t('Заказ').toUpperCase()} #{orderDetail.order_id}
               </Text>
               <Text style={styles.date}>
                 {`${
@@ -300,7 +300,7 @@ export class CheckoutComplete extends Component {
 
             <View style={styles.productsContainer}>
               <Text style={styles.header}>
-                {i18n.t('Products information').toUpperCase()}
+                {i18n.t('Інформація про замовлення').toUpperCase()}
               </Text>
               <View style={styles.productsWrapper}>{productsList}</View>
             </View>

@@ -50,7 +50,7 @@ const styles = EStyleSheet.create({
     position: 'relative',
   },
   inputBtn: {
-    backgroundColor: '$darkColor',
+    backgroundColor: '#0f0f0f',
     borderRadius: 4,
     paddingHorizontal: 20,
     paddingVertical: 7,
@@ -143,7 +143,7 @@ class CouponCodeSection extends Component {
 
     return (
       <View style={styles.wrapper}>
-        <FormBlock title={i18n.t('Coupon code')}>
+        <FormBlock title={i18n.t('Купон код')}>
           <View style={styles.inputWrapper}>
             <TextInput
               style={styles.input}
@@ -153,7 +153,7 @@ class CouponCodeSection extends Component {
             <TouchableOpacity
               onPress={this.handleAddCoupon}
               style={styles.inputBtn}>
-              <Text style={styles.inputBtnText}>{i18n.t('Add')}</Text>
+              <Text style={styles.inputBtnText}>{i18n.t('Додати')}</Text>
             </TouchableOpacity>
           </View>
           {items.map((item, index) => this.renderCouponItem(item, index))}

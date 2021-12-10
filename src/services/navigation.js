@@ -100,7 +100,7 @@ export function setRoot() {
               options: {
                 bottomTab: {
                   icon: iconsMap.home,
-                  text: i18n.t('Home'),
+                  text: i18n.t('Головна'),
                 },
               },
             },
@@ -119,7 +119,7 @@ export function setRoot() {
               options: {
                 bottomTab: {
                   icon: iconsMap.search,
-                  text: i18n.t('Search'),
+                  text: i18n.t('Пошук'),
                 },
               },
             },
@@ -138,7 +138,7 @@ export function setRoot() {
               options: {
                 bottomTab: {
                   icon: iconsMap['shopping-cart'],
-                  text: i18n.t('Cart'),
+                  text: i18n.t('Кошик'),
                 },
               },
             },
@@ -157,7 +157,7 @@ export function setRoot() {
               options: {
                 bottomTab: {
                   icon: iconsMap.favorite,
-                  text: i18n.t('Favorite'),
+                  text: i18n.t('Побажання'),
                 },
               },
             },
@@ -176,7 +176,7 @@ export function setRoot() {
               options: {
                 bottomTab: {
                   icon: iconsMap.person,
-                  text: i18n.t('Profile'),
+                  text: i18n.t('Профіль'),
                 },
               },
             },
@@ -531,7 +531,7 @@ export function pushProfileEdit(componentId, params = {}) {
       options: {
         topBar: {
           title: {
-            text: i18n.t('Profile'),
+            text: i18n.t('Профіль'),
           },
         },
       },
@@ -547,7 +547,7 @@ export function pushOrders(componentId, params = {}) {
       options: {
         topBar: {
           title: {
-            text: i18n.t('Orders').toUpperCase(),
+            text: i18n.t('Закази').toUpperCase(),
           },
         },
       },
@@ -581,7 +581,7 @@ export function pushLanguageSelection(componentId, params = {}) {
       options: {
         topBar: {
           title: {
-            text: i18n.t('Select Language'),
+            text: i18n.t('Обрати мову'),
           },
         },
       },
@@ -597,7 +597,7 @@ export function pushCurrencySelection(componentId, params = {}) {
       options: {
         topBar: {
           title: {
-            text: i18n.t('Currency'),
+            text: i18n.t('Валюта'),
           },
         },
       },
@@ -739,7 +739,7 @@ export function pushVendorManageFeatures(componentId, params = {}) {
       options: {
         topBar: {
           title: {
-            text: params.title || i18n.t('Features'),
+            text: params.title || i18n.t('Особливості'),
           },
         },
       },

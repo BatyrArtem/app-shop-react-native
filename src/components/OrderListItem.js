@@ -57,9 +57,9 @@ const OrderListItem = (props) => {
           <Text
             style={[
               styles.orderItemStatusText,
-              { color: item.status_data.color },
+              { color: '#000' },
             ]}>
-            {item.status_data.description}
+            {}
           </Text>
           <Text style={styles.orderItemTotal}>
             {item.total_formatted

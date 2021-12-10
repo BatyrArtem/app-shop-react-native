@@ -28,11 +28,17 @@ const PRODUCT_AVERAGE_SIZE =
 const IMAGE_PADDING =
   WINDOW_WIDTH > MIN_TABLET_WIDTH ? IMAGE_PADDING_PHONE : IMAGE_PADDING_TABLET;
 
+
+//export const PRODUCT_NUM_COLUMNS = Math.floor(
+//  WINDOW_WIDTH / PRODUCT_AVERAGE_SIZE,
+//);
+
 export const PRODUCT_NUM_COLUMNS = Math.floor(
-  WINDOW_WIDTH / PRODUCT_AVERAGE_SIZE,
+  2,
 );
+
 export const PRODUCT_IMAGE_WIDTH =
-  Math.floor((WINDOW_WIDTH / PRODUCT_NUM_COLUMNS) * 10000) / 10000 -
+  Math.floor((WINDOW_WIDTH / PRODUCT_NUM_COLUMNS) * 15000) / 10000 -
   IMAGE_PADDING;
 
 // Strip tags
@@ -53,7 +59,11 @@ export const formatPrice = (str) => {
   return str;
 };
 
-export const getImagePath = (data, size = '500x500') => {
+//export const getImagePath = (data, size = '500x500') => {
+//  if (has(data, `main_pair.icons.${size}.image_path`)) {
+//    return get(data, `main_pair.icons.${size}.image_path`);
+//  }
+export const getImagePath = (data, size = '550x500') => {
   if (has(data, `main_pair.icons.${size}.image_path`)) {
     return get(data, `main_pair.icons.${size}.image_path`);
   }

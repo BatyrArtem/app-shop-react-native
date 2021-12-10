@@ -129,7 +129,7 @@ export function updateProfile(
           type: NOTIFICATION_SHOW,
           payload: {
             type: 'success',
-            title: i18n.t('Profile'),
+            title: i18n.t('Профіль'),
             text: i18n.t('The profile data has been updated successfully'),
           },
         });

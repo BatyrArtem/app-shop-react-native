@@ -518,7 +518,7 @@ export class EditProduct extends Component {
                 },
               )}
               {this.renderMenuItem(
-                i18n.t('Features'),
+                i18n.t('Особливості'),
                 i18n.t('Edit Features'),
                 () => {
                   nav.pushVendorManageFeatures(this.props.componentId, {

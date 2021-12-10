@@ -482,7 +482,7 @@ export class CheckoutPayment extends Component {
         </KeyboardAwareScrollView>
         <CartFooter
           totalPrice={formatPrice(cart.total_formatted.price)}
-          btnText={i18n.t('Place order').toUpperCase()}
+          btnText={i18n.t('Розмістити замовлення').toUpperCase()}
           isBtnDisabled={false}
           onBtnPress={() => this.handlePlaceOrder()}
         />

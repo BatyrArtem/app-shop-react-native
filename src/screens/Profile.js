@@ -66,7 +66,7 @@ const styles = EStyleSheet.create({
     justifyContent: 'center',
   },
   btnText: {
-    color: '$menuTextColor',
+    color: '#000000',
     fontSize: '1rem',
   },
   signInInfo: {
@@ -132,7 +132,7 @@ export class ProfileEdit extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: i18n.t('Profile').toUpperCase(),
+          text: i18n.t('профiль').toUpperCase(),
         },
       },
     });
@@ -148,7 +148,7 @@ export class ProfileEdit extends Component {
       <>
         <View style={styles.signInSectionContainer}>
           <Text style={styles.signInSectionText}>
-            {i18n.t('Seller').toUpperCase()}
+            {i18n.t('Продавець').toUpperCase()}
           </Text>
         </View>
 
@@ -197,14 +197,14 @@ export class ProfileEdit extends Component {
       <>
         <View style={styles.signInSectionContainer}>
           <Text style={styles.signInSectionText}>
-            {i18n.t('Settings').toUpperCase()}
+            {i18n.t('Налаштування').toUpperCase()}
           </Text>
         </View>
 
         <TouchableOpacity
           onPress={() => nav.pushLanguageSelection(this.props.componentId)}
           style={styles.signInBtnContainer}>
-          <Text style={styles.signInBtnText}>{i18n.t('Language')}</Text>
+          <Text style={styles.signInBtnText}>{i18n.t('Мова')}</Text>
           <View style={styles.IconNameWrapper}>
             <Text style={styles.hintText}>
               {settings.selectedLanguage.langCode.toUpperCase()}
@@ -216,7 +216,7 @@ export class ProfileEdit extends Component {
         <TouchableOpacity
           onPress={() => nav.pushCurrencySelection(this.props.componentId)}
           style={styles.signInBtnContainer}>
-          <Text style={styles.signInBtnText}>{i18n.t('Currency')}</Text>
+          <Text style={styles.signInBtnText}>{i18n.t('Валюта')}</Text>
           <View style={styles.IconNameWrapper}>
             <Text style={styles.hintText}>
               {settings.selectedCurrency.symbol.toUpperCase()}
@@ -240,7 +240,7 @@ export class ProfileEdit extends Component {
       <View>
         <View style={styles.signInSectionContainer}>
           <Text style={styles.signInSectionText}>
-            {i18n.t('Pages').toUpperCase()}
+            {i18n.t('Сторiнки').toUpperCase()}
           </Text>
         </View>
         {pages.items.map((page, index) => {
@@ -319,15 +319,15 @@ export class ProfileEdit extends Component {
           <View style={styles.signInButtons}>
             <TouchableOpacity
               onPress={() => nav.showLogin()}
-              style={{ ...styles.btn, backgroundColor: '#4fbe31' }}>
+              style={{ ...styles.btn, backgroundColor: '#000000' }}>
               <Text style={{ ...styles.btnText, color: '#fff' }}>
-                {i18n.t('Sign in')}
+                {i18n.t('Увiйти')}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => nav.showRegistration()}
               style={styles.btn}>
-              <Text style={styles.btnText}>{i18n.t('Registration')}</Text>
+              <Text style={styles.btnText}>{i18n.t('Зареєструватися')}</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -358,7 +358,7 @@ export class ProfileEdit extends Component {
           style={styles.signInBtnContainer}>
           <View style={styles.IconNameWrapper}>
             <Icon name="person" style={styles.menuItemIcon} />
-            <Text style={styles.signInBtnText}>{i18n.t('Profile')}</Text>
+            <Text style={styles.signInBtnText}>{i18n.t('Профiль')}</Text>
           </View>
           <Icon name="chevron-right" style={styles.rightArrowIcon} />
         </TouchableOpacity>
@@ -368,7 +368,7 @@ export class ProfileEdit extends Component {
           style={styles.signInBtnContainer}>
           <View style={styles.IconNameWrapper}>
             <Icon name="receipt" style={styles.menuItemIcon} />
-            <Text style={styles.signInBtnText}>{i18n.t('Orders')}</Text>
+            <Text style={styles.signInBtnText}>{i18n.t('Замовлення')}</Text>
           </View>
           <Icon name="chevron-right" style={styles.rightArrowIcon} />
         </TouchableOpacity>
@@ -378,7 +378,7 @@ export class ProfileEdit extends Component {
           style={styles.signInBtnContainer}>
           <View style={styles.IconNameWrapper}>
             <Icon name="exit-to-app" style={styles.menuItemIcon} />
-            <Text style={styles.signInBtnText}>{i18n.t('Logout')}</Text>
+            <Text style={styles.signInBtnText}>{i18n.t('Вихiд')}</Text>
           </View>
           <Icon name="chevron-right" style={styles.rightArrowIcon} />
         </TouchableOpacity>

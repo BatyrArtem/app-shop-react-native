@@ -73,7 +73,7 @@ export const ProductFeaturesList: React.FC<ProductFeaturesListProps> = ({
 
   return (
     <Section
-      title={title ? i18n.t('Features') : ''}
+      title={title ? i18n.t('Особливості') : ''}
       wrapperStyle={styles.wrapperStyle}
       topDivider>
       {features.map((item, index) =>

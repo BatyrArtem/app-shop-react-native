@@ -7,7 +7,8 @@ import { getImagePath } from '../utils';
 
 const styles = EStyleSheet.create({
   container: {
-    width: '33.33333%',
+    width: '50%',
+//    width: '33.33333%',
     padding: 5,
     shadowColor: '#E0E0E0',
     shadowOffset: {

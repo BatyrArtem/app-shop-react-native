@@ -17,12 +17,12 @@ const styles = EStyleSheet.create({
     padding: 14,
   },
   cartInfoTitle: {
-    color: '#979797',
+    color: '#000000',
   },
   cartInfoTotal: {
     fontSize: '1rem',
     fontWeight: 'bold',
-    color: '#FD542A',
+    color: '#000000',
   },
 });
 
@@ -56,7 +56,7 @@ export default class extends PureComponent {
       <View style={styles.container}>
         <View>
           <Text style={styles.cartInfoTitle}>
-            {i18n.t('Total').toUpperCase()}
+            {i18n.t('Всього').toUpperCase()}
           </Text>
           <Text style={styles.cartInfoTotal}>{formatPrice(totalPrice)}</Text>
         </View>

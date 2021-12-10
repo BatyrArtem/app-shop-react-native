@@ -1,14 +1,14 @@
 export default {
   // API KEY
-  apiKey: '62f5a9c133da276c516cc7f491f8a644',
+  apiKey: '07c19ef457cdaef811e5ade69cb87c6d',
   // API URL
-  baseUrl: 'https://mobile.mve.demo.cs-cart.com/api/4.0/',
+  baseUrl: 'https://arber.ua/api/4.0/',
   // SITE URL
-  siteUrl: 'https://mobile.mve.demo.cs-cart.com/',
+  siteUrl: 'https://arber.ua/',
   // SHOP NAME
-  shopName: 'CS-Cart Mobile',
+  shopName: 'Arber Marketplace',
   // SHOP DEFAULT LAYOUT ID
-  layoutId: 2, // Default www.mobile.demo.cs-cart.com layout id
+  layoutId: 8, // Default www.mobile.demo.cs-cart.com layout id
   // VERSION MVE OR ULT
   version: 'MVE',
   // Enable push notifications

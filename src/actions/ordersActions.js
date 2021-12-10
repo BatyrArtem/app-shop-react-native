@@ -31,7 +31,7 @@ export function create(data) {
             text: get(
               error,
               'response.data.message',
-              i18n.t('Something went wrong. Please try again later.'),
+              i18n.t('Something 1 went wrong. Please try again later.'),
             ),
           },
         });

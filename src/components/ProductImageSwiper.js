@@ -8,16 +8,18 @@ import theme from '../config/theme';
 const styles = EStyleSheet.create({
   productImage: {
     width: '100%',
-    height: 300,
-    resizeMode: 'contain',
+    height: '100%',
+//    resizeMode: 'contain',
   },
 });
 
+// изменения внутри карточки товара сдвиг фотографии
 const SwiperWrapper = ({ children }) => {
   return (
     <Swiper
       horizontal={true}
-      height={300}
+      height={500}
+//       width={401}
       removeClippedSubviews={false}
       activeDotColor={theme.$dotsSwiperColor}>
       {children.map((img, index) => (

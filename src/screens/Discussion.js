@@ -100,7 +100,7 @@ export class Discussion extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: i18n.t('Comments & Reviews').toUpperCase(),
+          text: i18n.t('Коментари & Вiдгуки').toUpperCase(),
         },
         ...buttons,
       },

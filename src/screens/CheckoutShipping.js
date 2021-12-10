@@ -415,7 +415,7 @@ export class CheckoutShipping extends Component {
     return (
       <View style={styles.totalWrapper}>
         <Text style={styles.totalText}>
-          {`${i18n.t('Subtotal')}: ${get(
+          {`${i18n.t('Загальна сума')}: ${get(
             currentCart,
             'subtotal_formatted.price',
             '',
@@ -432,14 +432,14 @@ export class CheckoutShipping extends Component {
           </Text>
         )}
         <Text style={styles.totalText}>
-          {`${i18n.t('Shipping')}: ${get(
+          {`${i18n.t('Доставка')}: ${get(
             currentCart,
             'shipping_cost_formatted.price',
             '',
           )}`}
         </Text>
         <Text style={styles.totalText}>
-          {`${i18n.t('Taxes')}: ${get(
+          {`${i18n.t('Податки')}: ${get(
             currentCart,
             'tax_subtotal_formatted.price',
             '',
@@ -482,7 +482,7 @@ export class CheckoutShipping extends Component {
         </ScrollView>
         <CartFooter
           totalPrice={`${formatPrice(total)}`}
-          btnText={i18n.t('Next').toUpperCase()}
+          btnText={i18n.t('Наступна').toUpperCase()}
           isBtnDisabled={isNextDisabled}
           onBtnPress={() => this.handleNextPress()}
         />

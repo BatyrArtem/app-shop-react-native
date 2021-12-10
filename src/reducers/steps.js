@@ -8,15 +8,15 @@ const initialState = {
   flows: {
     checkoutFlow: {
       profile: {
-        title: 'Profile',
+        title: 'Профиль',
         screenName: 'CheckoutProfile',
       },
       shipping: {
-        title: 'Shipping',
+        title: 'Доставка',
         screenName: 'CheckoutShipping',
       },
       payment: {
-        title: 'Payment method',
+        title: 'Способ оплати',
         screenName: 'CheckoutPayment',
       },
     },

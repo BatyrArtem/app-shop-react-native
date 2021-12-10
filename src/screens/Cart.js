@@ -123,7 +123,7 @@ export class Cart extends Component {
     Navigation.mergeOptions(this.props.componentId, {
       topBar: {
         title: {
-          text: i18n.t('Cart').toUpperCase(),
+          text: i18n.t('Кошик').toUpperCase(),
         },
         ...buttons,
       },
@@ -142,16 +142,16 @@ export class Cart extends Component {
     const { cartActions } = this.props;
     if (buttonId === 'clearCart') {
       Alert.alert(
-        i18n.t('Clear all cart ?'),
+        i18n.t('Очистити кошик?'),
         '',
         [
           {
-            text: i18n.t('Cancel'),
+            text: i18n.t('Закрити'),
             onPress: () => {},
             style: 'cancel',
           },
           {
-            text: i18n.t('Ok'),
+            text: i18n.t('Oк'),
             onPress: () => cartActions.clear(),
           },
         ],

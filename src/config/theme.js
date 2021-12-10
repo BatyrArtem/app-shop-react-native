@@ -56,7 +56,7 @@ export default {
   $containerPadding: 20,
 
   // Discount label background on product.
-  $productDiscountColor: '#EAA944',
+  $productDiscountColor: '#e60216',
 
   // Color of the border on the product list.
   // It is not visible by default.
